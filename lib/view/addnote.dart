@@ -14,8 +14,8 @@ class AddNote extends StatefulWidget {
 class _AddNoteState extends State<AddNote> {
   var dateTime;
 
-  TextEditingController dateTimeController = TextEditingController();
-  TextEditingController titleController = TextEditingController();
+  TextEditingController dateTimeController    = TextEditingController();
+  TextEditingController titleController       = TextEditingController();
   TextEditingController discriptionController = TextEditingController();
 
   @override
@@ -160,9 +160,9 @@ class _AddNoteState extends State<AddNote> {
                       }).then((value) {
                         print("value $value");
                         Navigator.of(context).pushAndRemoveUntil(
-                            MaterialPageRoute(builder: (BuildContext context) {
-                              return HomeScreen();
-                            }),
+                                MaterialPageRoute(builder: (BuildContext context) {
+                                return HomeScreen();
+                              }),
                                 (Route<dynamic> route) => false);});},
                     icon: Icon(Icons.add, color: textcolor),
                     label: Text(
